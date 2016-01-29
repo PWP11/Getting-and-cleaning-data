@@ -1,5 +1,5 @@
 ---
-title: "Codebook"
+title: "CodeBook"
 author: "PWP11"
 date: "29 January 2016"
 output: html_document
