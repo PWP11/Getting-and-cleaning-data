@@ -1,0 +1,181 @@
+---
+title: "Codebook"
+author: "PWP11"
+date: "29 January 2016"
+output: html_document
+---
+
+##Introduction
+
+This codebook describes the variables and data in "averages.txt" and the transformations performed to clean up the data.
+
+##Background
+
+The data represent data collected from the accelerometers from the Samsung Galaxy SII smartphone. The source data was obtained from experiments carried out with a group of 30 volunteers aged 19-48 years. Each person performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying) wearing a Samsung Galaxy SII smartphone. A full description is available at <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones> where the source data was obtained.  See also the following publication:
+
+>Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+The source data was downloaded from <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>.  The data in averages.txt were derived from this source data.
+
+##Variable description
+
+The first variable **subject** contains an integer 1-30 identifying the volunteer who generated the measurement data.
+
+The second variable **activity** indicates which of the six activities (walking, walking upstairs, walking downstairs, sitting, standing or laying) was being carried out when the measurements were taken.
+
+The remaining variables are the average for each volunteer and each activity of a subset of variables from the source data.  The variables selected from the source data are the mean and standard deviation of each measurement and have names constructed as follows:
+
+* a letter **t** or **f** denoting whether it is a "time" measurement or the frequency domain signal from applying a Fast Fourier Transform respectively
+
+* **Body** or **Gravity** denoting body or gravity acceleration respectively
+
+* **Acc** or **Gyro** denoting whether the measurement is from the accelerometer or gyroscope respectively
+
+* the inclusion of **Jerk** denotes a Jerk signal
+
+* the inclusion of **Mag** denotes the magnitude calculated using the Euclidean norm
+
+* **Mean** or **Std** denoting whether the data is the mean or standard variation respectively of the relevant measurement
+
+* the inclusion of **X**, **Y** or **Z** denoting the 3-axial signals in the X, Y and Z directions respectively.
+
+##Description of the data
+
+The datafile averages.txt has a header row containing the variable names, 180 observations (the number of combinations of 30 volunteers and 6 activities) and the following 68 variables:
+
+Variable name | Description    | Value range
+--------------|----------------|------------
+subject | identifies the volunteer | integer [1,30]
+activity | identifies the activity | WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+tBodyAccMeanX | average of tBodyAcc-mean()-X | decimal (-1,1)
+tBodyAccMeanY | average of tBodyAcc-mean()-Y | decimal (-1,1)
+tBodyAccMeanZ | average of tBodyAcc-mean()-Z | decimal (-1,1)
+tGravityAccMeanX | average of tGravityAcc-mean()-X | decimal (-1,1)
+tGravityAccMeanY | average of tGravityAcc-mean()-Y | decimal (-1,1)
+tGravityAccMeanZ | average of tGravityAcc-mean()-Z | decimal (-1,1)
+tBodyAccJerkMeanX | average of tBodyAccJerk-mean()-X | decimal (-1,1)
+tBodyAccJerkMeanY | average of tBodyAccJerk-mean()-Y | decimal (-1,1)
+tBodyAccJerkMeanZ | average of tBodyAccJerk-mean()-Z | decimal (-1,1)
+tBodyGyroMeanX | average of tBodyGyro-mean()-X | decimal (-1,1)
+tBodyGyroMeanY | average of tBodyGyro-mean()-Y | decimal (-1,1)
+tBodyGyroMeanZ | average of tBodyGyro-mean()-Z | decimal (-1,1)
+tBodyGyroJerkMeanX | average of tBodyGyroJerk-mean()-X | decimal (-1,1)
+tBodyGyroJerkMeanY | average of tBodyGyroJerk-mean()-Y| decimal (-1,1)
+tBodyGyroJerkMeanZ | average of tBodyGyroJerk-mean()-Z | decimal (-1,1)
+tBodyAccMagMean | average of tBodyAccMag-mean() | decimal (-1,1)
+tGravityAccMagMean | average of tGravityAccMag-mean() | decimal (-1,1)
+tBodyAccJerkMagMean | average of tBodyAccJerkMag-mean() | decimal (-1,1)
+tBodyGyroMagMean | average of tBodyGyroMag-mean() | decimal (-1,1)
+tBodyGyroJerkMagMean | average of tBodyGyroJerkMag-mean() | decimal (-1,1)
+fBodyAccMeanX | average of fBodyAcc-mean()-X | decimal (-1,1)
+fBodyAccMeanY | average of fBodyAcc-mean()-Y | decimal (-1,1)
+fBodyAccMeanZ | average of fBodyAcc-mean()-Z | decimal (-1,1)
+fBodyAccJerkMeanX | average of fBodyAccJerk-mean()-X | decimal (-1,1)
+fBodyAccJerkMeanY | average of fBodyAccJerk-mean()-Y | decimal (-1,1)
+fBodyAccJerkMeanZ | average of fBodyAccJerk-mean()-Z | decimal (-1,1)
+fBodyGyroMeanX | average of fBodyGyro-mean()-X | decimal (-1,1)
+fBodyGyroMeanY | average of fBodyGyro-mean()-Y | decimal (-1,1)
+fBodyGyroMeanZ | average of fBodyGyro-mean()-Z | decimal (-1,1)
+fBodyAccMagMean | average of fBodyAccMag-mean() | decimal (-1,1)
+fBodyBodyAccJerkMagMean | average of fBodyBodyAccJerkMag-mean() | decimal (-1,1)
+fBodyBodyGyroMagMean | average of fBodyBodyGyroMag-mean() | decimal (-1,1)
+fBodyBodyGyroJerkMagMean | average of fBodyBodyGyroJerkMag-mean() | decimal (-1,1)
+tBodyAccStdX | average of tBodyAcc-std()-X | decimal (-1,1)
+tBodyAccStdY | average of tBodyAcc-std()-Y | decimal (-1,1)
+tBodyAccStdZ | average of tBodyAcc-std()-Z | decimal (-1,1)
+tGravityAccStdX | average of tGravityAcc-std()-X | decimal (-1,1)
+tGravityAccStdY | average of tGravityAcc-std()-Y | decimal (-1,1)
+tGravityAccStdZ | average of tGravityAcc-std()-Z | decimal (-1,1)
+tBodyAccJerkStdX | average of tBodyAccJerk-std()-X | decimal (-1,1)
+tBodyAccJerkStdY | average of tBodyAccJerk-std()-Y | decimal (-1,1)
+tBodyAccJerkStdZ | average of tBodyAccJerk-std()-Z | decimal (-1,1)
+tBodyGyroStdX | average of tBodyGyro-std()-X | decimal (-1,1)
+tBodyGyroStdY | average of tBodyGyro-std()-Y | decimal (-1,1)
+tBodyGyroStdZ | average of tBodyGyro-std()-Z | decimal (-1,1)
+tBodyGyroJerkStdX | average of tBodyGyroJerk-std()-X | decimal (-1,1)
+tBodyGyroJerkStdY | average of tBodyGyroJerk-std()-Y | decimal (-1,1)
+tBodyGyroJerkStdZ | average of tBodyGyroJerk-std()-Z | decimal (-1,1)
+tBodyAccMagStd | average of tBodyAccMag-std() | decimal (-1,1)
+tGravityAccMagStd | average of tGravityAccMag-std() | decimal (-1,1)
+tBodyAccJerkMagStd | average of tBodyAccJerkMag-std() | decimal (-1,1)
+tBodyGyroMagStd | average of tBodyGyroMag-std() | decimal (-1,1)
+tBodyGyroJerkMagStd | average of tBodyGyroJerkMag-std() | decimal (-1,1)
+fBodyAccStdX | average of fBodyAcc-std()-X | decimal (-1,1)
+fBodyAccStdY | average of fBodyAcc-std()-Y | decimal (-1,1)
+fBodyAccStdZ | average of fBodyAcc-std()-Z | decimal (-1,1)
+fBodyAccJerkStdX | average of fBodyAccJerk-std()-X | decimal (-1,1)
+fBodyAccJerkStdY | average of fBodyAccJerk-std()-Y | decimal (-1,1)
+fBodyAccJerkStdZ | average of fBodyAccJerk-std()-Z | decimal (-1,1)
+fBodyGyroStdX | average of fBodyGyro-std()-X | decimal (-1,1)
+fBodyGyroStdY | average of fBodyGyro-std()-Y | decimal (-1,1)
+fBodyGyroStdZ | average of fBodyGyro-std()-Z | decimal (-1,1)
+fBodyAccMagStd | average of fBodyAccMag-std() | decimal (-1,1)
+fBodyBodyAccJerkMagStd | average of fBodyBodyAccJerkMag-std() | decimal (-1,1)
+fBodyBodyGyroMagStd | average of fBodyBodyGyroMag-std() | decimal (-1,1)
+fBodyBodyGyroJerkMagStd | average of fBodyBodyGyroJerkMag-std() | decimal (-1,1)
+
+##Data cleaning approach
+The source data were supplied in a number of text files comprising volunteer (subject) identifier, activity and activity identifier, measurements (features) and descriptions of those measurements.  These data had further been split into training and test datasets.
+
+The data were read in using the following code:
+```{r}
+## Read in the test and training data
+subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt")
+X_train <- read.table("UCI HAR Dataset/train/X_train.txt")
+Y_train <- read.table("UCI HAR Dataset/train/Y_train.txt")
+subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt")
+X_test <- read.table("UCI HAR Dataset/test/X_test.txt")
+Y_test <- read.table("UCI HAR Dataset/test/Y_test.txt")
+## load lookup information
+features <- read.table("UCI HAR Dataset/features.txt", col.names=c("featureId", "featureLabel"))
+activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names=c("activityId", "activity"))
+```
+
+The data were then merged to form one dataset, including appending the appropriate activity and feature labels.
+
+```{r,message=FALSE,warning=FALSE}
+##Merge test and training data
+subject <- rbind(subject_train,subject_test)
+Xdata <- rbind(X_train,X_test)
+Ydata <- rbind(Y_train,Y_test)
+##Label the subject
+names(subject) <- c("subject")
+##Label the activities in Ydata
+library(plyr)
+names(Ydata) <- c("activityId")
+Ydata <- join(Ydata,activities, by = "activityId")
+##Label the variables in Xdata
+names(Xdata) <- features$featureLabel
+```
+
+Next, the features relating to mean and standard deviation were extracted.
+
+```{r}
+##Extract only variables relating to Mean Value "mean()" and Standard deviation "std()"
+##in Xdata and add subject and activity
+keepmean <- grep("-mean\\(\\)",names(Xdata))
+keepstd <- grep("-std\\(\\)",names(Xdata))
+dataset <- cbind(subject,Ydata,Xdata[,keepmean],Xdata[,keepstd])
+dataset <- dataset[,-2]
+```
+
+The variable names were tidied by removing brackets and hyphens, as follows:
+```{r}
+##Remove the "()" and the "-" from the variable names
+names(dataset) <- sub("-mean\\(\\)","Mean",names(dataset))
+names(dataset) <- sub("-std\\(\\)","Std",names(dataset))
+names(dataset) <- sub("-","",names(dataset))
+```
+
+Finally, we calculate the average of each measurement for each combination of volunteer (subject) and activity using the dplyr package:
+```{r,message=FALSE,warning=FALSE}
+##Average each variable for each activity and each subject
+library(dplyr)
+grouped <- group_by(dataset,subject,activity)
+averages <- summarise_each(grouped,funs(mean))
+```
+
+The last step is to export the final dataset as a text file.
+```{r}
+write.table(averages,file="averages.txt",row.names = FALSE)
+```
