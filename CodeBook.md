@@ -37,9 +37,10 @@ The second variable **activity** indicates which of the six activities
 laying) was being carried out when the measurements were taken.
 
 The remaining variables are the average for each volunteer and each
-activity of a subset of variables from the source data. The variables
+activity of a subset of variables from the source data, the source data
+having been provided normalised (and therefore unit-free). The variables
 selected from the source data are the mean and standard deviation of
-each measurement and have names constructed as follows:
+each (normalised) measurement and have names constructed as follows:
 
 -   a letter **t** or **f** denoting whether it is a "time" measurement
     or the frequency domain signal from applying a Fast Fourier
