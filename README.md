@@ -1,5 +1,5 @@
 # Getting-and-cleaning-data
-Coursera Getting and Cleaning Data Assignment
+###Coursera Getting and Cleaning Data Assignment
 
 This repo contains the following files submitted for the above assignment:
 
@@ -25,4 +25,4 @@ The code run_analysis.R reads in the source data and performs the transformation
 
 The data set "average" is exported as a text file "averages.txt".
 
-The variables, the data and the transformations performed are described in the Codebook.md.
+The variables, the data and the transformations performed are described in the CodeBook.md.
